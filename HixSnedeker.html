@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="multi/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+
+    <title>Hix Snedeker</title>
+</head>
+<body data-theme>
+    
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <nav class="nav_container panel">    
+        <ul class="lista list_menu" data-theme>
+            <li class="menu_item"><a href="index.html"  spy1>Inicio</a></li>
+            <li class="menu_item"><a href="index.html#proyectos"  spy1>Proyectos</a></li>
+            <li class="menu_item"><a href="#proyecto"  spy1>Proyecto</a></li>
+            <li class="menu_item"><a href="#contact"  spy1>Contacto</a></li>
+            <div class="color_container primColor">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+                <div class="color4"></div>
+                <div class="color5"></div>
+                <div class="color6"></div>
+            </div>
+        </ul>
+    </nav>
+    <div class="nav_container nav_anim">
+        <div class="lista anim_scrool_nav">
+            <div ><a href="index.html" spy2></a></div>
+            <div ><a href="index.html#proyectos" spy2></a></div>
+            <div ><a href="#proyecto" spy2></a></div>
+            <div ><a href="#contact" spy2></a></div>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <div class="container header_container" data-theme>
+            <div class="logo_container" onclick="location.href='index.html'">
+                <img loading="lazy" src="multi/logo.png" alt="">
+                <h1>MikeGómez</h1>
+            </div>
+
+            <div class="color_container secColor">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+                <div class="color4"></div>
+                <div class="color5"></div>
+                <div class="color6"></div>
+            </div>
+
+            <div class="botton">
+                <button class="hamburger hamburger--collapse panel-btn" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="content">
+
+
+
+        <section class="container proyecto_container" id="proyecto" spy1 spy2>
+            
+            <div class="text_tontent">
+                <h2 class="title"><a href="https://mikegomezs.github.io/hixsnedeker/" target="_blanck">Hix Snedeker.</a></h2>
+                <p class="text">La página de Hix Snedeker se realizo para explicar, de manera somera, quien es y a que se dedica la empresa. La cual, es una empresas de desarrollo en los EE. UU., que ofrece un enfoque integral y de vanguardia para el desarrollo comercial, industrial y residencial.</p>
+            </div>
+            
+            <div class="content_container proyecto">
+                <h3 class="sub-title">Observa el video y descubre el funcionamiento de la página</h3>
+                <!-- <video loading="lazy" src="multi/hixsnedeker-video.mp4" controls></video> -->
+                <h3 class="sub-title">Visualiza la página completa</h3>
+                <img loading="lazy" src="multi/hixsnedeker-all.png" alt="">
+            </div>
+
+        </section>
+
+
+        <section class="container contact_container gd" id="contact" spy1 spy2>
+            <div class="text_tontent">
+                <h2 class="title">Construyamos juntos algo grandioso</h2>
+                <p class="text">Me encantaría discutir tu proyecto y responderte cualquier pregunta que pueda tener. Si lo deseas puedes contactarme directamente con los siguientes datos o darme algo de información a continuación.</p>
+            </div>
+
+            <div class="content_container formulario">
+                <h3 class="sub-title">Comunícate conmigo</h3>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+                    <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                    <input type="submit" value="Enviar">
+                    <div class="contact-form-loader none">
+                        <img loading="lazy" src="multi/loader.svg" alt="Cargando">
+                    </div>
+                    <div class="contact-form-response none">
+                        <p>Los datos han sido enviados</p>
+                    </div>
+                </form>
+                <div class="content_info">
+                    
+                    <div class="info tel">
+                        <h3 class="sub-title">Teléfono</h3>
+                        <p class="text">+52 55 6547 0688</p>
+                    </div>
+
+                    <div class="info wha">
+                        <h3 class="sub-title">WhatsApp</h3>
+                        <p class="text">+52 55 1964 2510</p>
+                    </div>
+
+                    <div class="info correo">
+                        <h3 class="sub-title">Correo</h3>
+                        <p class="text">mikes13719@gmail.com</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- <footer class="container footer">
+        <p class = "lead">Copyright <span id = "date"></span> &#169; 2021 MikeGómez. All rigths reserved.</p>
+    </footer> -->
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
