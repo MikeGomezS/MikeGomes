@@ -176,6 +176,7 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.remove(classColor4));
         $selectors.forEach((element) => element.classList.remove(classColor5));
         $selectors.forEach((element) => element.classList.remove(classColor6));
+        ls.setItem("theme","color1");
     };
     const Color2Mode = () => {
         $selectors.forEach((element) => element.classList.remove(classColor1));
@@ -184,6 +185,7 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.remove(classColor4));
         $selectors.forEach((element) => element.classList.remove(classColor5));
         $selectors.forEach((element) => element.classList.remove(classColor6));
+        ls.setItem("theme","color2");
     };
     const Color3Mode = () => {
         $selectors.forEach((element) => element.classList.remove(classColor1));
@@ -192,6 +194,7 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.remove(classColor4));
         $selectors.forEach((element) => element.classList.remove(classColor5));
         $selectors.forEach((element) => element.classList.remove(classColor6));
+        ls.setItem("theme","color3");
     };
     const Color4Mode = () => {
         $selectors.forEach((element) => element.classList.remove(classColor1));
@@ -200,6 +203,7 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.add(classColor4));
         $selectors.forEach((element) => element.classList.remove(classColor5));
         $selectors.forEach((element) => element.classList.remove(classColor6));
+        ls.setItem("theme","color4");
     };
     const Color5Mode = () => {
         $selectors.forEach((element) => element.classList.remove(classColor1));
@@ -208,6 +212,7 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.remove(classColor4));
         $selectors.forEach((element) => element.classList.add(classColor5));
         $selectors.forEach((element) => element.classList.remove(classColor6));
+        ls.setItem("theme","color5");
     };
     const Color6Mode = () => {
         $selectors.forEach((element) => element.classList.remove(classColor1));
@@ -216,38 +221,31 @@ function darkTheme(btn1, btn2, btn3, btn4, btn5, btn6, classColor1, classColor2,
         $selectors.forEach((element) => element.classList.remove(classColor4));
         $selectors.forEach((element) => element.classList.remove(classColor5));
         $selectors.forEach((element) => element.classList.add(classColor6));
+        ls.setItem("theme","color6");
     };
 
 
     d.addEventListener('click', (e) => {
-
-        if (e.target.matches(btn1)) {
-            Color1Mode();
-        }
-        if (e.target.matches(btn2)) {
-            Color2Mode();
-        }
-        if (e.target.matches(btn3)) {
-            Color3Mode();
-        }
-        if (e.target.matches(btn4)) {
-            Color4Mode();
-        }
-        if (e.target.matches(btn5)) {
-            Color5Mode();
-        }
-        if (e.target.matches(btn6)) {
-            Color6Mode();
-        }
+        if (e.target.matches(btn1)) Color1Mode();
+        if (e.target.matches(btn2)) Color2Mode();
+        if (e.target.matches(btn3)) Color3Mode();
+        if (e.target.matches(btn4)) Color4Mode();
+        if (e.target.matches(btn5)) Color5Mode();
+        if (e.target.matches(btn6)) Color6Mode();
     });
 
-    // d.addEventListener('DOMContentLoaded', (e) => {
-    //     if (!ls.getItem('theme')) ls.setItem('theme', 'light');
+    d.addEventListener('DOMContentLoaded', (e) => {
+        if (ls.getItem("theme") === null) ls.setItem("theme", "color1");
+        if (ls.getItem("theme")==="color1") Color1Mode();
+        if (ls.getItem("theme")==="color2") Color2Mode();
+        if (ls.getItem("theme")==="color3") Color3Mode();
+        if (ls.getItem("theme")==="color4") Color4Mode();
+        if (ls.getItem("theme")==="color5") Color5Mode();
+        if (ls.getItem("theme")==="color6") Color6Mode();
 
-    //     ls.getItem('theme') === 'light'
-    //         ? ligthMode()
-    //         : darkMode();
-    // });
+    });
+
+
 }
 
 
