@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="multi/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+
+    <title>MikeGómez</title>
+</head>
+<body data-theme>
+    
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <nav class="nav_container panel">    
+        <ul class="lista list_menu" data-theme>
+            <li class="menu_item"><a href="index.html" spy>Hola</a></li>
+            <li class="menu_item"><a href="MisServivios.html" spy>Mis servivios</a></li>
+            <li class="menu_item"><a href="Contacto.html" spy>Contacto</a></li>
+            <li class="menu_item"><a href="Laberinto.html" spy>Laberinto</a></li>
+            <div class="color_container primColor">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+                <div class="color4"></div>
+                <div class="color5"></div>
+                <div class="color6"></div>
+            </div>
+        </ul>
+    </nav>
+
+
+    <header class="header">
+        <div class="container header_container" data-theme>
+            <div class="logo_container" onclick="location.href='index.html'">
+                <img loading="lazy" src="multi/logo.png" alt="">
+                <h1>MikeGómez</h1>
+            </div>
+
+            <div class="color_container secColor">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+                <div class="color4"></div>
+                <div class="color5"></div>
+                <div class="color6"></div>
+            </div>
+
+            <div class="botton">
+                <button class="hamburger hamburger--collapse panel-btn" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="content">
+      
+        <section class="container contact_container" id="contact" >
+            <div class="text_tontent">
+                <h2 class="title">Resuelve el siguiente laberinto</h2>
+                <p class="text">Hey, hola !!! <br>Si estas aburrido, cansado o simplemente te quieres distraer con algo <br> ¿Por qué no resuelves el siguiente laberinto?</p>
+
+                <form id="settings" action="">
+                  <p>Que tan grande quieres que sea al laberinto ???</p>
+                  <input id="size" type="number" value="400"/></br>
+                  <p>Que tan difícil quieres que sea el laberinto ???</p>
+                  <input id="number" type="number" value="20" /></br>
+                  <input id="submit" type="submit" value="Comenzar ahora">
+                </form>
+
+                <canvas class="maze"></canvas>
+
+                <div class="complete" data-theme>
+                    <h3>Felicidades <br> Lograste terminar el laberinto !!!</h3>
+                    <button class="replay" id="submit">Jugar otra vez</button>
+                    <button class="close" id="submit">Cerrar</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    <!-- <footer class="container footer">
+        <p class = "lead">Copyright <span id = "date"></span> &#169; 2021 MikeGómez. All rigths reserved.</p>
+    </footer> -->
+    <script src="js/maze.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

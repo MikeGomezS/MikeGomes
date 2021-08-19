@@ -10,7 +10,7 @@
     --background-color3: #2C7873;
     --background-color4: #206B83;
     --background-light-color: #e2e2e2;
-    --background-dark-color: #201F1F;
+    --background-dark-color: hsl(0, 2%, 12%);
     --text-light-color: #fffaf2;
     --text-gray1-color: #666666;
     --text-gray2-color: #515151;
@@ -243,7 +243,7 @@ main {
 /********* nav *********/
 .nav_container{
     position: fixed;
-    z-index: 5;
+    z-index: 15;
     width: 100%;
     height: calc(100vh - 85px);
     top: 85px;
@@ -268,7 +268,7 @@ main {
 }
 
 .list_menu li a {
-    font-size: 1.18rem;
+    font-size: var(--h2-font);
     font-weight: var(--font-medium-weight);
     color: var(--text-gray2-color);
 }
@@ -277,7 +277,7 @@ main {
 }
 
   /*----- anim_scrool -----*/
-.nav_anim{
+  .nav_container1{
     display: none;
 }
 .color_container{
@@ -361,9 +361,6 @@ main {
 }
 
 /********* inicio *********/
-.inicio_container{
-    height: 100vh;
-}
 .text_tontent {
     height: 100%;
     display: flex;
@@ -374,6 +371,7 @@ main {
 .inicio_container p {
     font-size: var(--h2-font);
 }
+
 
 /********* about *********/
 
@@ -481,7 +479,6 @@ main {
 }
 .contact-form {
     margin: auto;
-    margin-top: 50px;
     width: 85%;
 }
 
@@ -517,6 +514,7 @@ main {
     color: var(--text-gray2-color);
     background-color: transparent;
     border-bottom: thin solid var(--text-gray2-color);
+    text-align: left;
 }
 
 .contact-form input[type="submit"] {
@@ -572,8 +570,8 @@ main {
 }
 .info{
     margin: var(--mb-1);
-    margin-left: 50px;
-    text-align: left;
+    margin-top: 50px;
+    text-align: center;
 }
 .info > * {
     display: inline;
@@ -598,6 +596,82 @@ main {
 .proyecto img {
     width: 100%;
 }
+/********* Laberinto *********/
+ 
+  #settings {
+    margin: auto;
+    margin-top: 100px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--text-gray1-color);
+    font-size: 0.8rem;
+    z-index: 2;
+  }
+  #settings p{
+    font-weight: var(--font-medium-weight);
+    font-size: var(--h3-font);
+    color: var(--text-gray1-color);
+  }
+  
+  input {
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    margin-top: 1rem;
+    font-weight: var(--font-medium-weight);
+    font-size: var(--h3-font);
+    color: var(--text-gray1-color);
+  }
+
+
+  .maze {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .complete {
+    z-index: 4;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--text-gray1-color);
+  }
+  .complete h3{
+    font-weight: var(--font-medium-weight);
+    font-size: var(--h3-font);
+    color: var(--text-gray1-color);
+  }
+  
+  #submit {
+    display: block ;
+    margin: 50px auto;
+    background-color: transparent;
+    font-weight: var(--font-medium-weight);
+    font-size: var(--h3-font);
+    color: var(--text-gray1-color);
+    border: 0;
+    border-bottom: 1px solid var(--text-gray1-color);
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  
+  #submit:hover {
+    color: var(--text-gray2-color);
+  }
+  
+
+  
+
+
+
 
 
 
@@ -631,24 +705,34 @@ main {
         z-index: 10;
     }
     /********* nav *********/
-    .nav_container{
+    .nav_container1{
+        position: fixed;
         z-index: 10;
         display: block;
         visibility: visible;
         opacity: 1;
         background: none;
         width: 100px;
+        height: 100%;
     }
-    .lista{
+    .lista1{
         width: auto;
-        height: 90%;
+        height: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
-    .list_menu > *{
+    .list_menu1 li a {
+        font-size: 1.18rem;
+        font-weight: var(--font-medium-weight);
+        color: var(--text-gray2-color);
+    }
+    .list_menu1 li a.active {
+        font-weight: var(--font-bolder-weight);
+    }
+    .list_menu1 > *{
         transform: rotate(-90deg);
     }
 
@@ -674,11 +758,11 @@ main {
     .anim_scrool_nav div .active::after{
         content: "";
         display: block;
-        height: 30px;
+        height: 35px;
         width: 1px;
         position: relative;
-        top: -7.5px;
-        left: 45%;
+        top: -10px;
+        left: 50%;
         background: var(--text-gray2-color);
     }
 
@@ -689,9 +773,6 @@ main {
     .secColor{
         display: flex;
     }
-    .botton{
-        display: none;
-    }
 
 
     /********* inicio *********/
@@ -701,24 +782,87 @@ main {
         flex-direction: column;
         justify-content: space-evenly;
     }
+    .scroll-down{
+        position: relative;
+        height: 60px;
+        width: 60px;
+        top: -100px;
+        left: 20%;
+        cursor: pointer;
+    }
+    .scroll-down .circle{
+        display: block;
+        height: 60px;
+        width: 60px;
+        position: relative;
+        top: 0;
+        left: 0%;
+        border: 1px solid var(--text-gray2-color);
+        border-radius: 50px;
+    }
+    .scroll-down .arrow{
+        display: block;
+        height: 125px;
+        width: 1px;
+        position: relative;
+        top: 0px;
+        left: 30px;
+        background: var(--text-gray2-color);
+        animation: move 3s infinite;
+    }
+    @keyframes move {
+        0%{top: -100px;}
+        50%{top: -25px;}
+        100%{top: -100px;}
+    }
+    .scroll-down .arrow::after{
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        background: var(--text-gray2-color);
+        transform: rotate(40deg);
+    }
+    .scroll-down .arrow::before{
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        position: absolute;
+        top: 100px;
+        left: -10px;
+        background: var(--text-gray2-color);
+        transform: rotate(-40deg);
+    }
+
     
     /********* about *********/
-    .about_container{
-        height: 85vh;
-    }
     .about_container .content_container p{
-        width: 90%;
+        width: 75%;
         font-size: var(--normal-font);
     }
 
 
     /********* formas *********/
-    .formas_container{
-        height: 85vh;
+    .contact-form {
+        width: 70%;
     }
     .content_info {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .img-formas{
+        width: 70%;
+        margin: 25px auto;
+        filter: grayscale(75%);
+        transition: all 1.5s ease;
+    }
+    .img-formas:hover{
+        filter: grayscale(0%);
     }
 
     /********* Proyecto *********/
@@ -726,4 +870,16 @@ main {
         width: 75%;
     }
 
+
+
+    .maze {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .complete {
+        top: 150%;
+      }
 }
